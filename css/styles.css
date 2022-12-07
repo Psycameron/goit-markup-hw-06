@@ -11,6 +11,7 @@
 /* прозрачный акцент rgba(33, 150, 243, 0.9); */
 /* bgc для модалки rgba(0, 0, 0, 0.2); */
 /* border close rgba(0, 0, 0, 0.1); */
+/* цвет placeholder rgba(117, 117, 117, 0.5); */
 
 /* переменная времени перехода cubic-bezier(0.4, 0, 0.2, 1); */
 
@@ -29,6 +30,7 @@
   --portfolio-overlay: rgba(33, 150, 243, 0.9);
   --bgc-modal: rgba(0, 0, 0, 0.2);
   --border-close: rgba(0, 0, 0, 0.1);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -834,7 +836,7 @@ p {
   color: var(--primary-text-color);
 
   transition-property: border-color;
-  transition-duration: 250ms;
+  transition-duration: 1250ms;
   transition-timing-function: var(--timing-function);
 }
 
@@ -854,9 +856,9 @@ p {
 .modal-icon {
   position: absolute;
   top: 29px;
-  left: 15px;
+  left: 12px;
 
-  fill: currentColor;
+  fill: var(--title-text-color);
 }
 
 .form-input:hover,
@@ -867,6 +869,8 @@ p {
 .form-input:hover + .modal-icon,
 .form-input:focus + .modal-icon {
   color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
 }
 
 
@@ -884,6 +888,14 @@ p {
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+}
+
+.textarea-input::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: var(--placeholder-color);
 }
 
 .textarea-input {
@@ -915,11 +927,52 @@ p {
   margin-right: auto;
 }
 
+.checkbox-label {
+  position: relative;
+  padding-left: 23px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
 
+  font-size: 14px;
+  line-height: 1.71;
 
+  color: var(--primary-text-color);
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-icon {
+  position: absolute;
+  top: 45%;
+  left: 0;
+
+  /* background-color: blue;
+  fill: #fff; */
+
+  transform: translateY(-50%);
+}
+
+.checkbox-input:checked ~ .checkbox-icon {
+  background-color: orange;
+  background-image: url();
+}
 
 .checkbox-link {
   text-decoration: none;
   color: var(--accent-text-color);
   border-bottom: 1px solid var(--accent-text-color);
 }
+
+
+
+
