@@ -743,9 +743,8 @@ p {
 
   opacity: 1;
 
-  transform: opacity;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  transition: opacity 250ms var(--timing-function),
+    visibility 250ms var(--timing-function);
 }
 
 .backdrop.is-hidden {
@@ -792,6 +791,10 @@ p {
 
   background-color: var(--wtite-color);
   border: 1px solid var(--border-close);
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .close-icon {
@@ -808,7 +811,7 @@ p {
 .modal-form {
   padding: 40px;
   margin-right: auto;
-  margin-left: auto;  
+  margin-left: auto;
 
   color: var(--title-text-color);
 }
@@ -834,10 +837,6 @@ p {
   letter-spacing: 0.01em;
 
   color: var(--primary-text-color);
-
-  transition-property: border-color;
-  transition-duration: 1250ms;
-  transition-timing-function: var(--timing-function);
 }
 
 .form-input {
@@ -851,6 +850,10 @@ p {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition-property: border-color, color, fill;
+  transition-duration: 1250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .modal-icon {
@@ -864,15 +867,13 @@ p {
 .form-input:hover,
 .form-input:focus {
   border-color: var(--accent-text-color);
+  outline: transparent;
 }
 
 .form-input:hover + .modal-icon,
 .form-input:focus + .modal-icon {
-  color: var(--accent-text-color);
   fill: var(--accent-text-color);
-  border-color: var(--accent-text-color);
 }
-
 
 .form-textarea {
   position: relative;
@@ -882,12 +883,8 @@ p {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  
-  color: var(--primary-text-color);
 
-  transition-property: border-color;
-  transition-duration: 250ms;
-  transition-timing-function: var(--timing-function);
+  color: var(--primary-text-color);
 }
 
 .textarea-input::placeholder {
@@ -908,12 +905,17 @@ p {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .textarea-input:hover,
 .textarea-input:focus {
   cursor: pointer;
   border-color: var(--accent-text-color);
+  outline: transparent;
 }
 
 .policy {
@@ -972,7 +974,3 @@ p {
   color: var(--accent-text-color);
   border-bottom: 1px solid var(--accent-text-color);
 }
-
-
-
-
