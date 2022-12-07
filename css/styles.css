@@ -680,17 +680,16 @@ p {
 .subscribe.button {
   display: flex;
   position: relative;
-  
 }
 
 .subscribe-icon {
-  position: absolute;  
+  position: absolute;
   right: 28px;
-  top: 13px;
-  
+  top: 50%;
+  transform: translateY(-50%);
+
   fill: var(--wtite-color);
 }
-
 
 /* ===== Portfolio-page ==== */
 
@@ -974,7 +973,7 @@ p {
   resize: none;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  
+
   transition-property: border-color;
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -1022,20 +1021,39 @@ p {
   overflow: hidden;
 }
 
+.custome-checkbox {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 15px;
+  transform: translateY(-50%);
+
+  border: 2px solid black;
+  border-radius: 4px;
+
+  transition: opacity 250ms var(--timing-function);
+}
+
 .checkbox-icon {
   position: absolute;
   top: 45%;
   left: 0;
 
-  /* background-color: blue;
-  fill: #fff; */
+  opacity: 0;
 
   transform: translateY(-50%);
+
+  transition: opacity 250ms var(--timing-function);
 }
 
 .checkbox-input:checked ~ .checkbox-icon {
-  border-color: transparent;
-  background-color: orange;
+  opacity: 1;
+}
+
+.checkbox-input:checked + .custome-checkbox {
+  opacity: 0;
 }
 
 .checkbox-link {
