@@ -457,13 +457,27 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscribe">
+          <p class="subscribe-title">Підпишіться на розсилку</p>
+          <div class="subscribe-form">
+            <label class="subscribe-label">
+              <input class="subscribe-input" type="email"
+              placeholder="E-mail""/>
+            </label>
+            <button class="subscribe button primary" type="button">
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./img/icons.svg#send"></use>
+              </svg>Підписатися</button>
+          </div>
+        </div>
       </div>
     </footer>
 
     <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <form class="modal-form" autocomplete="off">
+        <form class="modal-form">
           <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
 
           <button type="button" class="close" data-modal-close>
@@ -511,10 +525,9 @@
               Погоджуюся з розсилкою та приймаю
               <a class="checkbox-link" href="#">Умови договору</a>
               <svg class="checkbox-icon" width="16" height="15">
-                <use  href="./img/icons.svg#checkbox"></use>
+                <use href="./img/icons.svg#checkbox"></use>
               </svg>
-              </label
-            >
+            </label>
           </div>
 
           <button class="button primary" type="submit">Відправити</button>

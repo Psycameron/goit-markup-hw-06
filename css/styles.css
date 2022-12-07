@@ -431,6 +431,7 @@ p {
 .social-link:focus {
   background-color: var(--accent-text-color);
   color: var(--wtite-color);
+  outline: transparent;
 }
 
 /* Clients */
@@ -473,6 +474,7 @@ p {
 .clients-link:focus {
   border: 1px solid var(--accent-text-color);
   color: var(--accent-text-color);
+  outline: transparent;
 }
 
 /* Button */
@@ -525,6 +527,7 @@ p {
 .button.primary:hover,
 .button.primary:focus {
   background-color: #188ce8;
+  outline: transparent;
 }
 
 .button.secondary:hover,
@@ -534,6 +537,7 @@ p {
   background-color: var(--accent-text-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: transparent;
 }
 
 /* Footer */
@@ -586,11 +590,13 @@ p {
 .location-footer:hover,
 .location-footer:focus {
   color: var(--accent-text-color);
+  outline: transparent;
 }
 
 .contact-footer:hover,
 .contact-footer:focus {
   color: var(--accent-text-color);
+  outline: transparent;
 }
 
 .footer-title {
@@ -622,10 +628,69 @@ p {
   transition-timing-function: var(--timing-function);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social-link.footer:hover,
+.social-link.footer:focus {
   background-color: var(--accent-text-color);
+  outline: transparent;
 }
+
+.subscribe {
+  margin-left: auto;
+}
+
+.subscribe-title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--wtite-color);
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-input {
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  color: var(--wtite-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+}
+
+.subscribe-input:hover,
+.subscribe-input:focus {
+  border-color: var(--accent-text-color);
+  outline: transparent;
+}
+
+.subscribe.button {
+  display: flex;
+  position: relative;
+  
+}
+
+.subscribe-icon {
+  position: absolute;  
+  right: 28px;
+  top: 13px;
+  
+  fill: var(--wtite-color);
+}
+
 
 /* ===== Portfolio-page ==== */
 
@@ -851,8 +916,8 @@ p {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  transition-property: border-color, color, fill;
-  transition-duration: 1250ms;
+  transition-property: border-color;
+  transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
 }
 
@@ -862,6 +927,10 @@ p {
   left: 12px;
 
   fill: var(--title-text-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
 }
 
 .form-input:hover,
@@ -965,8 +1034,8 @@ p {
 }
 
 .checkbox-input:checked ~ .checkbox-icon {
+  border-color: transparent;
   background-color: orange;
-  background-image: url();
 }
 
 .checkbox-link {
